@@ -1,0 +1,65 @@
+[{
+    "_id": {
+      "$oid": "5eee651f739f8c674fd736ee"
+    },
+    "name": "Tomato",
+    "image": "tomato.png",
+    "price": "40",
+    "size": "500gm"
+  },{
+    "_id": {
+      "$oid": "5eee6671a27a66807cf2bea3"
+    },
+    "name": "Beetroot",
+    "image": "beetroot.png",
+    "price": "80",
+    "size": "500gm"
+  },{
+    "_id": {
+      "$oid": "5eee6692a27a66807cf2bea4"
+    },
+    "name": "capcicum",
+    "image": "capcicum.png",
+    "price": "150",
+    "size": "500gm"
+  },{
+    "_id": {
+      "$oid": "5eee66a5a27a66807cf2bea5"
+    },
+    "name": "Onion",
+    "image": "onion.png",
+    "price": "200",
+    "size": "500gm"
+  },{
+    "_id": {
+      "$oid": "5eee66c4a27a66807cf2bea6"
+    },
+    "name": "Tomato",
+    "image": "tomato.png",
+    "price": "80",
+    "size": "1kg"
+  },{
+    "_id": {
+      "$oid": "5eee66cfa27a66807cf2bea7"
+    },
+    "name": "Beetroot",
+    "image": "beetroot.png",
+    "price": "150",
+    "size": "1kg"
+  },{
+    "_id": {
+      "$oid": "5eee66eea27a66807cf2bea8"
+    },
+    "name": "Capcicum",
+    "image": "capcicum.png",
+    "price": "300",
+    "size": "1kg"
+  },{
+    "_id": {
+      "$oid": "5eee6717a27a66807cf2bea9"
+    },
+    "name": "Onion",
+    "image": "onion.png",
+    "price": "400",
+    "size": "1kg"
+  }]
