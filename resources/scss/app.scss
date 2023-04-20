@@ -7,7 +7,7 @@ body{
     -webkit-font-smoothing:antialiased;
     color: $dark;
     // font-size:;
-    height:4000px
+
 }
 
 // nav div{
@@ -30,6 +30,13 @@ nav li a{
 
     }
 }
+
+//this is for background of each template 
+// .experiment{
+//     background: $secondary;
+//     padding: 10px;
+//     border-radius: 25px;
+// }
 
 section.hero {
     background: $secondary;
@@ -87,4 +94,8 @@ section.login{
 .noty_theme__mint{
     border-radius: 50px!important;
     padding-left: 8px!important;
+}
+
+a.link{
+    color: $pizza
 }
