@@ -51,8 +51,6 @@ function authController(){
             const checkEmail = await User.findOne({ email });
             if (checkEmail) {
                 req.flash('error', 'Email already taken');
-                req.flash('name', name);
-                req.flash('email', email);
                 return res.redirect('/register');
             } else {
                 const hashedPassword = await bcrypt.hash(password, 10);
@@ -64,7 +62,8 @@ function authController(){
                     password: hashedPassword,
                 });
                 user.save().then((user)=>{
-                    return res.redirect('/')
+                    // return res.redirect('/login')
+                    return res.redirect('/login')
                 }).catch(err =>{
                     req.flash('error','something went wrong')
                         return res.redirect('/register')

@@ -6,7 +6,7 @@
 //             await Order.find({ status: { $ne: 'completed' } }, null, { sort: { createdAt: -1 } }).
 //                 populate('customerId', '-password').exec()
 //                     if (req.xhr) {
-//                         return res.json(orders)
+//                         return res.json(Order)
 //                     }
 //                     return res.render('admin/orders')
                 
@@ -14,8 +14,8 @@
 //     }
 // }
 
-
 // module.exports = orderController
+
 
 const Order = require('../../../models/order');
 
@@ -29,7 +29,7 @@ function orderController() {
                 if (req.xhr) {
                     return res.json(orders);
                 }
-                return res.render('admin/orders', { orders });
+                return res.render('admin/orders', { Order });
             } catch (err) {
                 console.log(err);
                 return res.redirect('/');
