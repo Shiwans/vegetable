@@ -3,6 +3,8 @@ import moment from 'moment'
 import Noty from 'noty';
 import { initAdmin } from './admin'
 import { error } from 'laravel-mix/src/Log';
+import { init } from '../../app/models/order';
+import {initStripe} from './stripe'
 
 let addToCart = document.querySelectorAll('.add-to-cart')
 let cartCounter = document.querySelector('#cartCounter')
@@ -90,8 +92,9 @@ function updateStatus(order) {
 
 updateStatus(order);
 
-let socket = io()
+initStripe()
 
+let socket = io()
 if (order) {
     socket.emit('join', `order_${order._id}`)
 }
@@ -116,13 +119,3 @@ socket.on('orderUpdated', (data) => {
         layout: 'topRight'
     }).show()
 })
-
-
-
-
-//ajax call for form 
-// const paymentForm = document.querySelector('#payment-form')
-// paymentForm.addEventListener('submit',(e)=>{
-//     e.preventDefault()
-//     console.log(e)
-// })
