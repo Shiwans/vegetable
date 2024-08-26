@@ -16,6 +16,7 @@ const Emitter = require('events')
 
 mongoose.connect(process.env.MONGO_CONNECTION_URL, {
     useNewUrlParser: true,
+    tlsMinVersion: 'TLSv1.2',
     // useUnifiedTopology: true,
     // useFindAndModify: false,
     // useCreateIndex: true,
