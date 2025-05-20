@@ -2,8 +2,8 @@ import axios from 'axios';
 import moment from 'moment'
 import Noty from 'noty';
 import { initAdmin } from './admin'
-import { error } from 'laravel-mix/src/Log';
-import { init } from '../../app/models/order';
+// import { error } from 'laravel-mix/src/Log';
+// import { init } from '../../app/models/order';
 import {initStripe} from './stripe'
 
 let addToCart = document.querySelectorAll('.add-to-cart')
@@ -92,8 +92,12 @@ function updateStatus(order) {
 
 updateStatus(order);
 
-initStripe()
-
+// CONDITIONAL STRIPE INITIALIZATION
+// Check if the payment form (which contains the card element) exists on the current page
+const paymentFormExists = document.querySelector('#payment-form');
+if (paymentFormExists) {
+    initStripe(); // Only call initStripe if we are on a page where the payment form exists
+}
 let socket = io()
 if (order) {
     socket.emit('join', `order_${order._id}`)
